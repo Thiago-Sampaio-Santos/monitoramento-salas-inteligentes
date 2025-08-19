@@ -1,5 +1,5 @@
 package refatorado.strategy;
 
-public class ActionStrategy {
-    
+public interface ActionStrategy {
+    void executar();
 }

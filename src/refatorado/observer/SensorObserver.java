@@ -1,5 +1,5 @@
 package refatorado.observer;
 
-public class SensorObserver {
-    
+public interface SensorObserver {
+    void atualizar();   
 }
