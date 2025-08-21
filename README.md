@@ -97,48 +97,50 @@ Os diagramas da arquitetura **antes** e **depois** estão disponíveis nas pasta
 
 ## Organização dos Pacotes
 
-inicial/
-├── App.java
-├── Sala.java
-├── SensorTemperatura.java
-├── SensorPresenca.java
-├── SensorLuminosidade.java
-├── Relatorio.java
-└── ColetorDados.java
+1. inicial/
+- App.java
+- Sala.java
+- SensorTemperatura.java
+- SensorPresenca.java
+- SensorLuminosidade.java
+- Relatorio.java
+- ColetorDados.java
 
+1. refatorado/
+app/
+  -  App.java
 
-refatorado/
- app/
-  └── App.java
-model/
-  ├── Sensor.java
-  ├── SensorTemperatura.java
-  ├── SensorPresenca.java
-  └── SensorLuminosidade.java
-decorator/
-   ├── SensorDecorator.java
-   └── LoggingSensorDecorator.java
- facade/
- 
-   └── MonitoringFacade.java
- factory/
-   └── SensorFactory.java
+2. model/
+ - Sensor.java
+ - SensorTemperatura.java
+ - SensorPresenca.java
+ - SensorLuminosidade.java
 
- observer/
-   ├── SensorObserver.java
-   ├── SensorSubject.java
-   └── ActionTrigger.java
+3. decorator/
+  - SensorDecorator.java
+  - LoggingSensorDecorator.java
+
+ 4. facade/
+  - MonitoringFacade.java
    
- strategy/
-   ├── ActionStrategy.java
-   ├── LightOnStrategy.java
-   └── ReportStrategy.java
-   
- report/
-   └── GeradorRelatorio.java
+ 5. factory/
+   -SensorFactory.java
 
-utils/
-    └── ColetorDadosSensor.java
+ 6. observer/
+  - SensorObserver.java
+  - SensorSubject.java
+  - ActionTrigger.java
+   
+ 7. strategy/
+ - ActionStrategy.java
+ - LightOnStrategy.java
+ - ReportStrategy.java
+   
+ 8. report/
+   - GeradorRelatorio.java
+
+9. utils/
+    - ColetorDadosSensor.java
 
 ---
 
