@@ -1,17 +1,23 @@
 package refatorado.facade;
 
+import refatorado.decorator.LoggingSensorDecorator;
+import refatorado.factory.SensorFactory;
 import refatorado.model.*;
 import refatorado.report.GeradorRelatorio;
+import refatorado.utils.ColetorDadosSensor;
 
 public class MonitoringFacade {
     public void iniciarMonitoramento() {
-        SensorTemperatura temp = new SensorTemperatura();
-        SensorPresenca pres = new SensorPresenca();
-        SensorLuminosidade luz = new SensorLuminosidade();
+        SensorTemperatura temp = (SensorTemperatura) SensorFactory.criarSensor("temperatura");
+        SensorPresenca pres = (SensorPresenca) SensorFactory.criarSensor("presenca");
+        SensorLuminosidade luz = (SensorLuminosidade) SensorFactory.criarSensor("luminosidade");
 
-        temp.coletarDados();
-        pres.coletarDados();
-        luz.coletarDados();
+        // Decorator aplicado ao sensor de temperatura
+        Sensor tempComLog = new LoggingSensorDecorator(temp);
+
+        ColetorDadosSensor.coletar(tempComLog);
+        ColetorDadosSensor.coletar(pres);
+        ColetorDadosSensor.coletar(luz);
 
         if (pres.isPresenca() && luz.getLuminosidade() < 30) {
             System.out.println("Luz acesa.");
