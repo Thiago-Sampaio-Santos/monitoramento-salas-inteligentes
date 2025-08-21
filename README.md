@@ -106,32 +106,38 @@ inicial/
 ├── Relatorio.java
 └── ColetorDados.java
 
+
 refatorado/
-├── app/
-│   └── App.java
-├── model/
-│   ├── Sensor.java
-│   ├── SensorTemperatura.java
-│   ├── SensorPresenca.java
-│   └── SensorLuminosidade.java
-├── decorator/
-│   ├── SensorDecorator.java
-│   └── LoggingSensorDecorator.java
-├── facade/
-│   └── MonitoringFacade.java
-├── factory/
-│   └── SensorFactory.java
-├── observer/
-│   ├── SensorObserver.java
-│   ├── SensorSubject.java
-│   └── ActionTrigger.java
-├── strategy/
-│   ├── ActionStrategy.java
-│   ├── LightOnStrategy.java
-│   └── ReportStrategy.java
-├── report/
-│   └── GeradorRelatorio.java
-└── utils/
+ app/
+  └── App.java
+model/
+  ├── Sensor.java
+  ├── SensorTemperatura.java
+  ├── SensorPresenca.java
+  └── SensorLuminosidade.java
+decorator/
+   ├── SensorDecorator.java
+   └── LoggingSensorDecorator.java
+ facade/
+ 
+   └── MonitoringFacade.java
+ factory/
+   └── SensorFactory.java
+
+ observer/
+   ├── SensorObserver.java
+   ├── SensorSubject.java
+   └── ActionTrigger.java
+   
+ strategy/
+   ├── ActionStrategy.java
+   ├── LightOnStrategy.java
+   └── ReportStrategy.java
+   
+ report/
+   └── GeradorRelatorio.java
+
+utils/
     └── ColetorDadosSensor.java
 
 ---
