@@ -124,7 +124,7 @@ app/
   - MonitoringFacade.java
    
  5. factory/
-   -SensorFactory.java
+   - SensorFactory.java
 
  6. observer/
   - SensorObserver.java
