@@ -108,36 +108,36 @@ Os diagramas da arquitetura **antes** e **depois** estão disponíveis nas pasta
 
 1. refatorado/
 app/
-  -  App.java
+    -  App.java
 
 2. model/
- - Sensor.java
- - SensorTemperatura.java
- - SensorPresenca.java
- - SensorLuminosidade.java
+    - Sensor.java
+    - SensorTemperatura.java
+    - SensorPresenca.java
+    - SensorLuminosidade.java
 
 3. decorator/
-  - SensorDecorator.java
-  - LoggingSensorDecorator.java
+    - SensorDecorator.java
+    - LoggingSensorDecorator.java
 
  4. facade/
-  - MonitoringFacade.java
+    - MonitoringFacade.java
    
  5. factory/
-   - SensorFactory.java
+    - SensorFactory.java
 
  6. observer/
-  - SensorObserver.java
-  - SensorSubject.java
-  - ActionTrigger.java
+    - SensorObserver.java
+    - SensorSubject.java
+    - ActionTrigger.java
    
  7. strategy/
- - ActionStrategy.java
- - LightOnStrategy.java
- - ReportStrategy.java
+    - ActionStrategy.java
+    - LightOnStrategy.java
+    - ReportStrategy.java
    
  8. report/
-   - GeradorRelatorio.java
+    - GeradorRelatorio.java
 
 9. utils/
     - ColetorDadosSensor.java
